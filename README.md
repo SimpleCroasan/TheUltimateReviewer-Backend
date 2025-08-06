@@ -24,18 +24,10 @@ The system is composed of several independent microservices, each responsible fo
 
 
 Each service is a standalone project and can be found in this GitHub organization:  
-🔗 [https://github.com/your-org-name](https://github.com/your-org-name)
+🔗 [https://github.com/TheUltimateReviewer](https://github.com/TheUltimateReviewer)
 
 ---
 
-## ▶️ How to Run the System
-
-Each microservice must be cloned and run individually.  
-Please refer to the `README.md` of each service repository for:
-
-- Environment variable setup
-- How to run it locally (using `mvn spring-boot:run`, Docker, or similar)
-- Dependencies like MongoDB, Cloudinary, RabbitMQ, etc.
 
 > ⚠️ A unified `docker-compose` setup for running all services together is not available (yet).
 
@@ -64,12 +56,13 @@ You can fork any repository under the organization and contribute improvements.
 
 Here are direct links to the most important services (replace with real links):
 
-- [User Service](https://github.com/your-org-name/user-service)
-- [Image Service](https://github.com/your-org-name/image-service)
-- [Comment Service](https://github.com/your-org-name/comment-service)
-- [Search Service](https://github.com/your-org-name/search-service)
-- [Gateway Service](https://github.com/your-org-name/gateway-service)
-- [Eureka Server](https://github.com/your-org-name/eureka-server)
+- [Authentication Service](https://github.com/TheUltimateReviewer/review_auth)
+- [Profile Service](https://github.com/TheUltimateReviewer/profile)
+- [Post Service](https://github.com/TheUltimateReviewer/Post)
+- [Cloudinary Service](https://github.com/TheUltimateReviewer/Cloudinary)
+- [Gateway Service](https://github.com/TheUltimateReviewer/api_gateway)
+- [Eureka Server](https://github.com/TheUltimateReviewer/Eureka)
+- [Databases](https://github.com/TheUltimateReviewer/Database)
 
 ---
 
