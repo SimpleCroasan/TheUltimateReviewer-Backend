@@ -27,7 +27,7 @@ Each service is a standalone project and can be found in the GitHub organization
 
 ## 🗺️ System Diagram
 
-![Architecture Overview](./Diagram.png)
+![Architecture Overview](./Diagram.jpg)
 
 
 > ⚠️ A unified `docker-compose` setup for running all services together is not available (yet).
