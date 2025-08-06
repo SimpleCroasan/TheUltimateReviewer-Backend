@@ -1,105 +1,79 @@
-# The Ultimate Reviewer
+# The Ultimate Reviewer – Central Documentation
 
-This is a **prototype backend** for a social media-like application focused on handling user authentication, image uploading, commenting, and user search capabilities using a **microservices** architecture.
+**The Ultimate Reviewer** is a microservices-based backend system for managing image-based content, user profiles, comments, and more. It follows a distributed architecture using Spring Boot, Spring Cloud, and reactive programming with WebFlux.
 
----
-
-## 🧠 Technologies Used
-
-- Java 21
-- Spring Boot
-- Spring WebFlux
-- Spring Cloud / Eureka Server
-- Spring Security + JWT
-- PostgreSQL
-- RabbitMQ
-- Cloudinary (image hosting)
-- Docker / Docker Compose
+> ⚠️ This repository does **not** contain executable code.  
+> It serves as a central place for documentation, architecture overview, and service links.
 
 ---
 
-## 🧩 Microservices
+## 🧱 Architecture Overview
 
-This project is split into several microservices:
+The system is composed of several independent microservices, each responsible for a specific part of the functionality:
 
-| Microservice       | Description                                  | Port |
-|--------------------|----------------------------------------------|------|
-| `eureka-server`    | Service Discovery                             | 8761 |
-| `api-gateway`      | Entry point, handles routing/auth             | 8080 |
-| `user-service`     | Handles user registration, login, profile     | 8081 |
-| `image-service`    | Uploads and fetches images (Cloudinary)       | 8082 |
-| `comment-service`  | Manages comments on images                    | 8083 |
-| `search-service`   | Handles search for users                      | 8084 |
-| `notification-service` | Handles email notifications (future work) | 8085 |
+| Service | Description |
+|--------|-------------|
+| **User Service** | Handles user registration, login, JWT authentication, and profile management. |
+| **Image Service** | Manages image uploads (e.g., to Cloudinary) and retrieval. |
+| **Comment Service** | Allows users to comment on images. |
+| **Search Service** | Enables user and image search functionality. |
+| **Gateway Service** | API Gateway (Spring Cloud Gateway) that routes external requests to internal services. |
+| **Eureka Server** | Service discovery component for microservices to register and locate each other. |
+| **RabbitMQ** | Message broker for asynchronous communication between services. |
 
----
-
-## 🧪 Functionalities
-
-- User registration and login with JWT authentication.
-- Upload images using Cloudinary.
-- View user profiles and their uploaded images.
-- Add comments to images.
-- Search for users.
-- Service-to-service communication with RabbitMQ.
-- Load balancing and routing via API Gateway.
+Each service is a standalone project and can be found in this GitHub organization:  
+🔗 [https://github.com/your-org-name](https://github.com/your-org-name)
 
 ---
 
-## 🚀 How to Run
+## ▶️ How to Run the System
 
-### Prerequisites
+Each microservice must be cloned and run individually.  
+Please refer to the `README.md` of each service repository for:
 
-- Make sure **Docker** and **Docker Compose** are installed.
+- Environment variable setup
+- How to run it locally (using `mvn spring-boot:run`, Docker, or similar)
+- Dependencies like MongoDB, Cloudinary, RabbitMQ, etc.
 
-### Steps
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-org/theUltimateReviewer-central.git
-   cd theUltimateReviewer-central
-   ```
-
-2. Build and run using Docker Compose:
-   ```bash
-   docker-compose up --build
-   ```
-
-3. The services will be available at their respective ports. You can modify the ports in the `docker-compose.yml` file if needed.
+> ⚠️ A unified `docker-compose` setup for running all services together is not available (yet).
 
 ---
 
-## 📁 Structure of this Repository
+## 🌱 Project Status
 
-This repository contains links to all the associated microservices:
+This project is a prototype and proof-of-concept.  
+It focuses primarily on backend architecture and communication between services, including:
 
-- [eureka-server](https://github.com/your-org/eureka-server)
-- [api-gateway](https://github.com/your-org/api-gateway)
-- [user-service](https://github.com/your-org/user-service)
-- [image-service](https://github.com/your-org/image-service)
-- [comment-service](https://github.com/your-org/comment-service)
-- [search-service](https://github.com/your-org/search-service)
-- [notification-service](https://github.com/your-org/notification-service)
-
-> Each of the above repositories contains its own README with detailed instructions for running the service individually.
+- Stateless authentication using JWT
+- Centralized gateway routing
+- Reactive programming (WebFlux)
+- Asynchronous messaging with RabbitMQ
 
 ---
 
-## 📌 Notes
+## 📫 Contributing
 
-- This project is still under development.
-- It's designed primarily as a **backend prototype** for a potential social media-like application.
-- The frontend is not included.
-- Most refined parts: **user authentication**, **profile management**, **image upload**, and **routing**.
+Feel free to explore, clone, or extend the services.  
+You can fork any repository under the organization and contribute improvements.
 
 ---
 
-## 👨‍💻 Author
+## 📎 Related Repositories
 
-Made with ❤️ by [Your Name](https://github.com/your-github).
+Here are direct links to the most important services (replace with real links):
+
+- [User Service](https://github.com/your-org-name/user-service)
+- [Image Service](https://github.com/your-org-name/image-service)
+- [Comment Service](https://github.com/your-org-name/comment-service)
+- [Search Service](https://github.com/your-org-name/search-service)
+- [Gateway Service](https://github.com/your-org-name/gateway-service)
+- [Eureka Server](https://github.com/your-org-name/eureka-server)
 
 ---
 
-## 📝 License
+## 📘 License
 
-This project is licensed under the MIT License.
+This project is for educational purposes and internal experimentation.
+
+---
+
