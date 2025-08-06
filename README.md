@@ -1,9 +1,10 @@
 # The Ultimate Reviewer – Central Documentation
 
-**The Ultimate Reviewer** is a microservices-based backend system for managing image-based content, user profiles, comments, and more. It follows a distributed architecture using Spring Boot, Spring Cloud, and reactive programming with WebFlux.
+**The Ultimate Reviewer** is a microservices-based backend system for managing image-based content, user profiles, comments, and more.  
+It follows a distributed architecture using Spring Boot, Spring Cloud, and reactive programming with WebFlux.
 
 > ⚠️ This repository does **not** contain executable code.  
-> It serves as a central place for documentation, architecture overview, and service links.
+> It serves as a central place for documentation, architectural overview, and links to individual services.
 
 ---
 
@@ -11,23 +12,18 @@
 
 The system is composed of several independent microservices, each responsible for a specific part of the functionality:
 
-| **Service**         | **Description** |
-|---------------------|-----------------|
-| **Eureka Server**   | Service discovery server for registering and locating microservices. |
-| **API Gateway**     | Gateway that routes external requests to the appropriate microservices using Spring Cloud Gateway. |
-| **Post Service**    | Handles image posting. Uses the Cloudinary service to store and serve uploaded images. |
-| **Cloudinary Service** | Dedicated service for managing images via the Cloudinary API. |
-| **Profile Service** | Manages user profiles, including personal information, profile pictures, and settings. |
+| **Service**             | **Description** |
+|-------------------------|-----------------|
+| **Eureka Server**       | Service discovery server for registering and locating microservices. |
+| **API Gateway**         | Gateway that routes external requests to the appropriate microservices using Spring Cloud Gateway. |
+| **Post Service**        | Handles image posting. Uses the Cloudinary service to store and serve uploaded images. |
+| **Cloudinary Service**  | Dedicated service for managing images via the Cloudinary API. |
+| **Profile Service**     | Manages user profiles, including personal information, profile pictures, and settings. |
 | **Review Auth Service** | Handles user registration, login, and JWT-based authentication. |
-| **Database**        | Container with the database used by the microservices. |
+| **Database**            | Container with the database used by the microservices. |
 
-
-
-Each service is a standalone project and can be found in this GitHub organization:  
+Each service is a standalone project and can be found in the GitHub organization:  
 🔗 [https://github.com/TheUltimateReviewer](https://github.com/TheUltimateReviewer)
-
----
-
 
 > ⚠️ A unified `docker-compose` setup for running all services together is not available (yet).
 
@@ -40,7 +36,7 @@ It focuses primarily on backend architecture and communication between services,
 
 - Stateless authentication using JWT
 - Centralized gateway routing
-- Reactive programming (WebFlux)
+- Reactive programming with WebFlux
 - Asynchronous messaging with RabbitMQ
 
 ---
@@ -54,7 +50,7 @@ You can fork any repository under the organization and contribute improvements.
 
 ## 📎 Related Repositories
 
-Here are direct links to the most important services (replace with real links):
+Here are direct links to the most important services:
 
 - [Authentication Service](https://github.com/TheUltimateReviewer/review_auth)
 - [Profile Service](https://github.com/TheUltimateReviewer/profile)
@@ -70,5 +66,4 @@ Here are direct links to the most important services (replace with real links):
 
 This project is for educational purposes and internal experimentation.
 
----
 
