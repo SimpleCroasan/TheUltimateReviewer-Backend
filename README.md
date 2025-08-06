@@ -40,9 +40,12 @@ This project is a prototype and proof-of-concept.
 It focuses primarily on backend architecture and communication between services, including:
 
 - Stateless authentication using JWT
-- Centralized gateway routing
-- Reactive programming with WebFlux
-- Asynchronous messaging with RabbitMQ
+- Centralized gateway routing with Spring Cloud Gateway
+- Reactive programming with Spring WebFlux
+- Asynchronous messaging using RabbitMQ
+- Containerized deployment using Docker
+- Image storage and delivery via Cloudinary
+
 
 ---
 
