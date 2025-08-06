@@ -11,15 +11,17 @@
 
 The system is composed of several independent microservices, each responsible for a specific part of the functionality:
 
-| Service | Description |
-|--------|-------------|
-| **User Service** | Handles user registration, login, JWT authentication, and profile management. |
-| **Image Service** | Manages image uploads (e.g., to Cloudinary) and retrieval. |
-| **Comment Service** | Allows users to comment on images. |
-| **Search Service** | Enables user and image search functionality. |
-| **Gateway Service** | API Gateway (Spring Cloud Gateway) that routes external requests to internal services. |
-| **Eureka Server** | Service discovery component for microservices to register and locate each other. |
-| **RabbitMQ** | Message broker for asynchronous communication between services. |
+| **Service**         | **Description** |
+|---------------------|-----------------|
+| **Eureka Server**   | Service discovery server for registering and locating microservices. |
+| **API Gateway**     | Gateway that routes external requests to the appropriate microservices using Spring Cloud Gateway. |
+| **Post Service**    | Handles image posting. Uses the Cloudinary service to store and serve uploaded images. |
+| **Cloudinary Service** | Dedicated service for managing images via the Cloudinary API. |
+| **Profile Service** | Manages user profiles, including personal information, profile pictures, and settings. |
+| **Review Auth Service** | Handles user registration, login, and JWT-based authentication. |
+| **Database**        | Container with the database used by the microservices. |
+
+
 
 Each service is a standalone project and can be found in this GitHub organization:  
 🔗 [https://github.com/your-org-name](https://github.com/your-org-name)
