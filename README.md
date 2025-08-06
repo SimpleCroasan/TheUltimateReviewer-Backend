@@ -25,6 +25,11 @@ The system is composed of several independent microservices, each responsible fo
 Each service is a standalone project and can be found in the GitHub organization:  
 🔗 [https://github.com/TheUltimateReviewer](https://github.com/TheUltimateReviewer)
 
+## 🗺️ System Diagram
+
+![Architecture Overview](./Diagram.png)
+
+
 > ⚠️ A unified `docker-compose` setup for running all services together is not available (yet).
 
 ---
